@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/first-component.esm.js"></script>
-    <script nomodule src="/build/first-component.js"></script>
-  </head>
-  <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/first-component.esm.js"></script>
+  <script nomodule src="/build/first-component.js"></script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .side-nav ul {
+      list-style: none;
+    }
+
+    .side-nav li {
+      margin: 0.5rem 0;
+    }
+
+    .side-nav a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <uc-side-drawer title="Main menu">
+    <nav class="side-nav">
+      <ul>
+        <li><a href="/">A link</a></li>
+        <li><a href="/">Second Link</a></li>
+        <li><a href="/">Third Link</a></li>
+        <li><a href="/">Forth Link</a></li>
+      </ul>
+    </nav>
+  </uc-side-drawer>
+
+  <script>
+  </script>
+</body>
+
 </html>

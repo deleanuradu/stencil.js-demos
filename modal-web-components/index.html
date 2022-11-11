@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Components</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 2rem;
+            font-family: sans-serif;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="modal.js" async defer></script>
+</head>
+
+<body>
+    <uc-modal>
+        <span slot="title">Draggable Modal</span>
+        <p>Here you insert the content into the slot!</p>
+    </uc-modal>
+    <p>Please confirm your choice.</p>
+    <button>Show Details & Confirm</button>
+    <script>
+        const confirmButton = document.querySelector('button');
+        const modal = document.querySelector('uc-modal');
+
+        modal.addEventListener('confirm', () => {
+            console.log('Confirming...');
+        });
+
+        modal.addEventListener('cancel', () => {
+            console.log('Canceling...');
+        });
+
+        confirmButton.addEventListener('click', () => {
+            if (!modal.isOpen) {
+                modal.open();
+                console.log('Opening...');
+            }
+        });
+    </script>
+</body>
+
+</html>

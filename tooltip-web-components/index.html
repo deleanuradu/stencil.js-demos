@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Web Components</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    html {
+      --color-primary: #A4E6FC;
+    }
+
+    div {
+      border: 2px solid orange;
+      margin: 16px 0;
+      padding: 4px;
+    }
+
+    uc-tooltip {
+      padding: 0.25rem;
+    }
+
+    .highlight {
+      /* background-color: rgba(255, 213, 0, 0.389); */
+    }
+  </style>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="" />
+  <script src="tooltip.js" async defer></script>
+  <script src="confirm-link.js" async defer></script>
+</head>
+
+<body>
+  <p>
+    <uc-tooltip class="important" text="Web Components are a set of standards">
+      <span class="highlight">Web components</span>
+    </uc-tooltip>
+    are awesome!
+  </p>
+  <uc-tooltip>Here we go!</uc-tooltip>
+  <a is="uc-confirm-link" href="www.goole.com">Google</a>
+</body>
+
+</html>
